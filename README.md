@@ -14,3 +14,13 @@ The libraries/packages used in this part includes:
 - pinyin version: 0.4.0 (can be found at https://pypi.org/project/pinyin/)
 
 This part of code was entirely written on Jupyter Notebook; to run this part, open the "neat version" file and run each chunk. Thanks =)
+
+
+
+
+
+
+
+
+
+![image](https://https://github.com/cs-ssa-w21/final-project-rooibos/blob/master/rainbow%20pup%20saying%20thank%20you.png)
