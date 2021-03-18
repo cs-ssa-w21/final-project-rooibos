@@ -5,7 +5,6 @@ This is the final project of team rooibos. We tried to see how the occurrence of
 The libraries/packages used in this part include:
 - requests version: 2.25.1
 - bs4 (BeautifulSoup) version: 4.9.3
-- regex version: 2.2.1
 - pandas version: 1.2.0
 - csv version: 1.0
 - cpca version: 0.5.5 (can be found at https://github.com/DQinYuan/chinese_province_city_area_mapper or https://pypi.org/project/cpca/)
