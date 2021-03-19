@@ -25,6 +25,10 @@ Finally, we match the socio-economic data with crime data, that is only remainin
 
 The libraries/packages used in this part include:
 - pandas version: 1.2.0
+- numpy
+- os
+- matplotlib.pyplot
+- seaborn version: 0.11.1
 
 Files:
 - socioeco_variables_pre.csv:
