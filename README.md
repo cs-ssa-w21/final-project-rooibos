@@ -39,16 +39,21 @@ Files:
 
 
 ## Visualization
+We designed 2 maps where you could explore and interact with our data. In the [visualization.ipynb](visualization.ipynb) file, you could also view the results and performances of diverse models (e.g., PCA, LASSO, Linear Regression) fitted with the collected crime and socioeconomic data.
+
 Besides packages covered above, additional packages & data sets in this part include:
 - geopandas version: 0.9.0
 - bokeh version: 2.3.0
 - wordcloud version: 1.8.1
+- regex version: 2021.3.17
 - folium version: 0.12.0
 - seaborn version: 0.11.1
 - scikit-learn version: 0.24.1
 - [map of China (city-level) shapefile](https://www.jianguoyun.com/p/DU61EH8QgsnRBxj4x7QD)
 - [longitutes & latitutes of Chinese cities](https://simplemaps.com/data/cn-cities)
 
-Two interactive maps ([NumberOnMap](NumberOnMap.html) & [WordCloudOnMap](WordCloudOnMap.html)) are included in the repository. Learn more about our results by browsing the maps!
+Two interactive maps ([NumberOnMap](docs/NumberOnMap.html) & [WordCloudOnMap](docs/WordCloudOnMap.html)) are included in the repository. You could access the maps directly through our project's public webpage [**Rooibos Map**](https://cs-ssa-w21.github.io/final-project-rooibos/). Learn more about our data by interacting with the maps!
 
-![image](rainbow%20pup%20saying%20thank%20you.png)
+*Note: since the size of the maps is large, it could take a long time to load the page. Please be patient!*
+
+<img src="rainbow%20pup%20saying%20thank%20you.png" alt="drawing" width="250"/>
