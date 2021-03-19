@@ -88,9 +88,9 @@ crime += other2
 # were part of the narration and hence manually added
 crime = [c for c in crime if c != '知乎问题']
 
-# removing crimes happened in Taiwan ('台湾')
-# as other datasets do not include Taiwan
-crime = [l for l in crime if '台湾' not in l]
+# removing crimes happened in Taiwan, Hong Kong, Macau
+# as other datasets do not include them
+crime = [l for l in crime if '台湾' not in l and '香港' not in l and '澳门' not in l]
 
 # manually dropping crimes happened overseas
 # and cases that are not about particular incidents
@@ -176,9 +176,6 @@ for row in df.iterrows():
 
             dct_city[key] = set(rel_city)
 
-#Manually adding HongKong and Macao as they were absent in the json file
-dct_city['香港特别行政区'] = {'香港', '香港特别行政区'}
-dct_city['澳门特别行政区'] = {'澳门', '澳门特别行政区'}
 
 
 # Building a university dictionary as some cases were located in universities
@@ -204,6 +201,8 @@ for l in df_uni.schools:
 # and there are Chinese universities
 # sharing the sames
 del dct_uni['台湾省']
+del dct_uni['香港特别行政区']
+del dct_uni['澳门特别行政区']
 
 # matching crimes
 
@@ -480,14 +479,6 @@ for c in leftover:
 # with the above codes
 
 ind = [i for i in range(len(lst_ma)) if lst_ma[i][0] ==
-        '福建福州大学三名男教师陈新、苏思文及李登峰非礼香港机场女地勤 从后方抱住袭胸，'
-        '三人在福州大学分别任教化学、政治及管理'][0]
-lst_ma[ind] = ('福建福州大学三名男教师陈新、苏思文及李登峰非礼香港机场女地勤 '
-                '从后方抱住袭胸，三人在福州大学分别任教化学、政治及管理','香港特别行政区')
-dct_m['香港特别行政区'] += 1
-dct_m['福州市'] -= 1
-
-ind = [i for i in range(len(lst_ma)) if lst_ma[i][0] ==
         '辽宁凌源籍男子占某在江苏南通市市区钟楼广场地下通道处偷袭猥亵过路女子'][0]
 lst_ma[ind] = ('辽宁凌源籍男子占某在江苏南通市市区钟楼广场地下通道处\
 偷袭猥亵过路女子','南通市')
@@ -549,11 +540,6 @@ lst_ma[ind] = ('福建龙岩武平男子钟某鸣将女子诱骗至其厦门\
 dct_m['厦门市'] += 1
 dct_m['龙岩市'] -= 1
 
-l = '香港粉岭一家再造纸工厂男子王某雄杀女同事后,放入碎纸机碎尸'
-left_crime.remove(l)
-dct_m['香港特别行政区'] += 1
-lst_ma.append((l,'香港特别行政区'))
-
 l = '江西玉山一湖南籍男子张某猥亵女学生和女老师'
 left_crime.remove(l)
 dct_m['上饶市'] += 1
@@ -582,36 +568,29 @@ lst_special = [c for c in dct_m.keys() if c not in dct_lang.keys()]
 
 special = lst_special[:]
 for ct in special:
-    if ct.startswith('香港'):
-        # if the city is HongKong
-        dct_lang[ct] = ('HongKong', 'Hongkong')
-    elif ct.startswith('澳门'):
-        # if the city is Macao
-        dct_lang[ct] = ('Macao', 'Macao')
+    key = list(jieba.cut(ct,cut_all=True))[0]
+    # This is to disentangle some measure units like 'city'
+    # or 'self-governing state' which can be coded differently
+    # in different library/datasets; but as the measure units are
+    # always behind the names, selecting the first element
+    # can usually derive the name.
+    eng = [(c.name_en,c.province) for c in
+            cities.get_cities() if key in c.name_cn]
+    if len(eng) == 1:
+        dct_lang[ct] = eng[0]
+        lst_special.remove(ct)
     else:
-        key = list(jieba.cut(ct,cut_all=True))[0]
-        # This is to disentangle some measure units like 'city'
-        # or 'self-governing state' which can be coded differently
-        # in different library/datasets; but as the measure units are
-        # always behind the names, selecting the first element
-        # can usually derive the name.
-        eng = [(c.name_en,c.province) for c in
-                cities.get_cities() if key in c.name_cn]
-        if len(eng) == 1:
-            dct_lang[ct] = eng[0]
-            lst_special.remove(ct)
-        else:
-            # If the name is not in the dataset, we translate ourselves.
-            eng_name = pinyin.get(key, format="strip",
-                         delimiter="").capitalize()
-            # getting the pinyin of the name
-            prov = [c for c in dct_city[ct] if c.endswith('省')][0]
-            # finding its province
-            prov_eng = pinyin.get(prov[:-1], format="strip",
-                        delimiter="").capitalize()
-            # getting the pinyin for the province
-            dct_lang[ct] = (eng_name,prov_eng)
-            lst_special.remove(ct)
+        # If the name is not in the dataset, we translate ourselves.
+        eng_name = pinyin.get(key, format="strip",
+                     delimiter="").capitalize()
+        # getting the pinyin of the name
+        prov = [c for c in dct_city[ct] if c.endswith('省')][0]
+        # finding its province
+        prov_eng = pinyin.get(prov[:-1], format="strip",
+                    delimiter="").capitalize()
+        # getting the pinyin for the province
+        dct_lang[ct] = (eng_name,prov_eng)
+        lst_special.remove(ct)
 
 
 # removing cities with 0 crimes
