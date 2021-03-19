@@ -14,6 +14,17 @@ The libraries/packages used in this part include:
 
 This part of code was entirely written on Jupyter Notebook; to run this part, open the "neat version" file and run each chunk. Thanks =)
 
+## Social data collection and match
+After getting crime data by web-scraping, we collect social-economic data. The data resource is the EPS (Easy Professional Superior) data platform, which is a systematic information service platform and where there is access to many databases. 
+Web: https://www.epsnet.com.cn/index.html#/Home
+
+The original data are about 21 variables, from two databases in the EPS platform. The last three comes from Chinses Regional Economic Database, the others come from Chinese City Database. For each variable, we collect panel data from 2014-2018, the number of observations (cities) vary from different variables.
+The final version of socio-economic data is that, for each city, the value of a variable is the mean of the values of the variable from 2014-2018.
+Finally, we match the socio-economic data with crime data, that is only remaining observations which we both have their crime data and socio-economic data.
+
+The libraries/packages used in this part include:
+- pandas version: 1.2.0
+- csv version: 1.0
 
 
 ## Visualization
