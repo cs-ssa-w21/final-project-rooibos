@@ -27,7 +27,8 @@ The libraries/packages used in this part include:
 - pandas version: 1.2.0
 - pandas version( Imputation and Variables for regression.ipynb):1.0.5
 - numpy: 1.18.05
-- os
+- requests: 2.24.0
+- io
 - matplotlib: 3.2.2
 - seaborn: 0.10.1
 
