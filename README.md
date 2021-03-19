@@ -27,6 +27,11 @@ The libraries/packages used in this part include:
 - pandas version: 1.2.0
 - csv version: 1.0
 
+Files:
+socioeco_variables_final.csv:
+total_data_impute.csv: The data after imputation
+data_reg.csv: The data picked after checking correlation(multicolinearity among predictors)
+
 
 ## Visualization
 Besides packages covered above, additional packages & data sets in this part include:
