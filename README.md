@@ -25,15 +25,17 @@ Finally, we match the socio-economic data with crime data, that is only remainin
 
 The libraries/packages used in this part include:
 - pandas version: 1.2.0
-- numpy
+- pandas version( Imputation and Variables for regression.ipynb):1.0.5
+- numpy: 1.18.05
 - os
-- matplotlib.pyplot
-- seaborn version: 0.11.1
+- matplotlib: 3.2.2
+- seaborn: 0.10.1
 
 Files:
-- socioeco_variables_pre.csv:
-- total_data_impute.csv: The data after imputation
+- socioeco_variables_pre.csv: Socioeconomic data before imputation
+- total_data_impute.csv: Socioeconomic data after imputation
 - data_reg.csv: The data picked after checking correlation(multicolinearity among predictors)
+-  Imputation and Variables for regression.ipynb : impute socioeconomic variables and choose socioeconomic variables for regression analysis
 
 
 ## Visualization
