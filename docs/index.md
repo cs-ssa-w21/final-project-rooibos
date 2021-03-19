@@ -8,8 +8,8 @@ Follow your curser on the map to access the crime data.
 
 <iframe src="NumberOnMap.html"
     sandbox="allow-same-origin allow-scripts"
-    width="80%"
-    height="80%"
+    width="100%"
+    height="500%"
     scrolling="no"
     seamless="seamless"
     frameborder="0"></iframe>
@@ -20,8 +20,8 @@ Click on the markers to view the word clouds of the crime cases having happened 
 
 <iframe src="WordCloudOnMap.html"
     sandbox="allow-same-origin allow-scripts"
-    width="50%"
-    height="50%"
+    width="10%"
+    height="550"
     scrolling="no"
     seamless="seamless"
     frameborder="0"></iframe>
