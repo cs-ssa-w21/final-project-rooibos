@@ -28,9 +28,9 @@ The libraries/packages used in this part include:
 - csv version: 1.0
 
 Files:
-socioeco_variables_final.csv:
-total_data_impute.csv: The data after imputation
-data_reg.csv: The data picked after checking correlation(multicolinearity among predictors)
+- socioeco_variables_final.csv:
+- total_data_impute.csv: The data after imputation
+- data_reg.csv: The data picked after checking correlation(multicolinearity among predictors)
 
 
 ## Visualization
