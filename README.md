@@ -4,7 +4,7 @@ This is the final project of team rooibos. We tried to explore how the occurrenc
 ## Team Member and Main Responsibility:
 - Yier Ling: webscraping of crime data
 - Zixu Chen: collection and cleaning of socioeconomic data
-- Yao yao: collection and cleaning of socioeconomic data
+- Yao Yao: collection and cleaning of socioeconomic data
 - Wanxi Zhou: data analysis
 
 ## Web-scraping
