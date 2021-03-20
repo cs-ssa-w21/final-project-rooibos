@@ -12,7 +12,7 @@ The libraries/packages used in this part include:
 - china_cities version: 0.0.3 (can be found at https://pypi.org/project/china-cities/)
 - pinyin version: 0.4.0 (can be found at https://pypi.org/project/pinyin/)
 
-This part of code was entirely written on Jupyter Notebook; to run this part, open the "neat version" file and run each chunk. Thanks =)
+This part of code was entirely written on Jupyter Notebook; to run this part, open the "MatchingCrimes" file and run each chunk. To run it in the terminal, please use the "scrape.py" file, which consists of all code in the Jupyter Notebook (but without markdowns so I do recommend the Jupyter Notebook file!). Thanks =)
 
 ## Social data collection and match
 After getting crime data by web-scraping, we collect social-economic data. The data resource is the EPS (Easy Professional Superior) data platform, which is a systematic information service platform and where there is access to many databases. 
