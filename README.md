@@ -54,7 +54,7 @@ Code:(run them on Jupyter notebook)
 - Impu_RegressVari.ipynb : impute socioeconomic variables and choose socioeconomic variables for regression analysis
 
 
-## Visualization
+## Data analysis (Visualization & Regression)
 
 We designed 2 maps where you could explore and interact with our data. In the [visualization.ipynb](visualization.ipynb) file, you could also view the results and performances of diverse models (e.g., PCA, LASSO, Linear Regression) fitted with the collected crime and socioeconomic data.
 
