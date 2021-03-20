@@ -1,7 +1,7 @@
-# final-project-rooibos
+# Final Project-Rooibos
 This is the final project of team rooibos. We tried to explore how the occurrence of gender-specific crimes in China relates to socioeconomic factors. We scraped gender-specific crime data from a 'bot' webpage documenting such incidents and matched most of them to their happening cities. In the meantime, we gathered socioeconomic data of these cities, and eventually conduct both qualitive and quantative analyses, which are visulization and regression analysis. We found that population, average salary of urban employees and number of theatres are positively correlated with the number of crimes. This means cities with more people, higher economic level and more entertainment expenditure tend to have more reported crime. We speculate it is because people in cities of these features are of more education level and thus are willing to report. More detailed analysis has to be conducted to get solid answers.
 
-## Team member and main responsibility:
+## Team Member and Main Responsibility:
 - Yier Ling: webscraping of crime data
 - Zixu Chen: collection and cleaning of socioeconomic data
 - Yao yao: collection and cleaning of socioeconomic data
@@ -26,7 +26,7 @@ The outputs:
 
 Thanks =)
 
-## Social data collection and match
+## Collection and Match of Socioeconomic Data
 After getting crime data by web-scraping, we collected socioeconomic data. The data resource is the EPS (Easy Professional Superior) data platform, which is a systematic information service platform and where there is access to many databases. 
 
 Web: https://www.epsnet.com.cn/index.html#/Home
