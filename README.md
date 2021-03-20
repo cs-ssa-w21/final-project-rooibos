@@ -1,5 +1,11 @@
 # final-project-rooibos
-This is the final project of team rooibos. We tried to see how the occurrence of gender-specific crimes in China relates to socioeconomic factors. We scraped gender-specific crime data from a 'bot' webpage documenting such incidents and matched most of them to their happening cities. In the meantime, we gather socioeconomic data on these cities, and eventually conduct quantative analyses to arrive at conclusions.
+This is the final project of team rooibos. We tried to explore how the occurrence of gender-specific crimes in China relates to socioeconomic factors. We scraped gender-specific crime data from a 'bot' webpage documenting such incidents and matched most of them to their happening cities. In the meantime, we gathered socioeconomic data of these cities, and eventually conduct both qualitive and quantative analyses, which are visulization and regression analysis. We found that population, average salary of urban employees and number of theatres are positively correlated with the number of crimes. This means cities with more people, higher economic level and more entertainment expenditure tend to have more reported crime. We speculate it is because people in cities of these features are of more education level and thus are willing to report. More detailed analysis has to be conducted to get solid answers.
+
+## Team member and main responsibility:
+- Yier Ling: webscraping of crime data
+- Zixu Chen: collection and cleaning of socioeconomic data
+- Yao yao: collection and cleaning of socioeconomic data
+- Wanxi Zhou: data analysis
 
 ## Web-scraping
 The libraries/packages used in this part include:
@@ -12,16 +18,22 @@ The libraries/packages used in this part include:
 - china_cities version: 0.0.3 (can be found at https://pypi.org/project/china-cities/)
 - pinyin version: 0.4.0 (can be found at https://pypi.org/project/pinyin/)
 
-This part of code was entirely written on Jupyter Notebook; to run this part, open the "MatchingCrimes" file and run each chunk. To run it in the terminal, please use the "scrape.py" file, which consists of all code in the Jupyter Notebook (but without markdowns so I do recommend the Jupyter Notebook file!). Thanks =)
+This part of code was entirely written on Jupyter Notebook; to run this part, open the "MatchingCrimes" file and run each chunk. To run it in the terminal, please use the "scrape.py" file, which consists of all code in the Jupyter Notebook (but without markdowns so I do recommend the Jupyter Notebook file!). 
+
+The outputs: 
+- data.csv: case numbers, city names in Chinese, and city names with provinces in English as columns, showing the amount of crimes in each city
+- macthes.csv: crime descriptions and cities in Chinese as columns, showing the match of each crime to its city.
+
+Thanks =)
 
 ## Social data collection and match
-After getting crime data by web-scraping, we collect social-economic data. The data resource is the EPS (Easy Professional Superior) data platform, which is a systematic information service platform and where there is access to many databases. 
+After getting crime data by web-scraping, we collected socioeconomic data. The data resource is the EPS (Easy Professional Superior) data platform, which is a systematic information service platform and where there is access to many databases. 
 
 Web: https://www.epsnet.com.cn/index.html#/Home
 
-The original data are about 21 variables, from two databases in the EPS platform. The last three come from Chinses Regional Economic Database, the others come from Chinese City Database. For each variable, we collect panel data from 2014-2018, the number of observations (cities) vary from different variables.
-The final version of socio-economic data is that, for each city, the value of a variable is the mean of the values of the variable from 2014-2018.
-Finally, we match the socio-economic data with crime data, that is only remaining observations which we both have their crime data and socio-economic data.
+The original data contains 21 variables, from two databases in the EPS platform. The last three variables are from Chinses Regional Economic Database, and the others are from Chinese City Database. For each variable, we collected panel data from 2014-2018, the number of observations (cities) vary from different variables.
+The final version of socioeconomic data is that, for each city, the value of a variable is the mean of the values of the variable from 2014-2018.
+Finally, we matched and imptuted the socioeconomic data with crime data for further analysis.
 
 The libraries/packages used in this part include:
 - pandas version: 1.2.0
@@ -37,12 +49,13 @@ Data:
 - total_data_impute.csv: Cleaned socioeconomic data after imputation
 - data_reg.csv: The data of picked regressors after checking correlation(multicolinearity among predictors)
 
-Code:
+Code:(run them on Jupyter notebook)
 - code_sociol-eco variables colloect & preprocess.ipynb：merge and preprocess collcted raw socioeconomic data
 - Impu_RegressVari.ipynb : impute socioeconomic variables and choose socioeconomic variables for regression analysis
 
 
 ## Visualization
+
 We designed 2 maps where you could explore and interact with our data. In the [visualization.ipynb](visualization.ipynb) file, you could also view the results and performances of diverse models (e.g., PCA, LASSO, Linear Regression) fitted with the collected crime and socioeconomic data.
 
 Besides packages covered above, additional packages & data sets in this part include:
