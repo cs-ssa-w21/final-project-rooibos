@@ -31,7 +31,8 @@ The libraries/packages used in this part include:
 - matplotlib: 3.2.2
 - seaborn: 0.10.1
 
-CSV data:
+Data:
+- socio-econ data(folder): raw files of socioeconomic data
 - socioeco_variables_pre.csv:Preprocessed socioeconomic data before imputation
 - total_data_impute.csv: Cleaned socioeconomic data after imputation
 - data_reg.csv: The data of picked regressors after checking correlation(multicolinearity among predictors)
