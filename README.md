@@ -38,7 +38,7 @@ Data:
 - data_reg.csv: The data of picked regressors after checking correlation(multicolinearity among predictors)
 
 Code:
-- code_sociol-eco variables colloect & preprocess.ipynb： merge and clean collcted raw socioeconomic data
+- code_sociol-eco variables colloect & preprocess.ipynb：merge and preprocess collcted raw socioeconomic data
 - Impu_RegressVari.ipynb : impute socioeconomic variables and choose socioeconomic variables for regression analysis
 
 
