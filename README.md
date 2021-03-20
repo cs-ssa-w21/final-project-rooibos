@@ -62,7 +62,7 @@ Besides packages covered above, additional packages & data sets in this part inc
 - geopandas version: 0.9.0
 - bokeh version: 2.3.0
 - wordcloud version: 1.8.1
-- regex version: 2021.3.17
+- regex version: [2021.3.17](https://pypi.org/project/regex/)
 - folium version: 0.12.0
 - seaborn version: 0.11.1
 - scikit-learn version: 0.24.1
