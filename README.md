@@ -35,8 +35,8 @@ Files:
 - socioeco_variables_pre.csv:Cleaned socioeconomic data before imputation
 - total_data_impute.csv: Cleaned socioeconomic data after imputation
 - data_reg.csv: The data picked after checking correlation(multicolinearity among predictors)
-- 
--  Imputation and Variables for regression.ipynb : impute socioeconomic variables and choose socioeconomic variables for regression analysis
+
+-  Impu_RegressVari.ipynb : impute socioeconomic variables and choose socioeconomic variables for regression analysis
 
 
 ## Visualization
