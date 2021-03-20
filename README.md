@@ -32,7 +32,7 @@ The libraries/packages used in this part include:
 - seaborn: 0.10.1
 
 Data:
-- socio-econ data(folder): raw files of socioeconomic data
+- socio-econ csv(folder): raw files of socioeconomic data
 - socioeco_variables_pre.csv:Preprocessed socioeconomic data before imputation
 - total_data_impute.csv: Cleaned socioeconomic data after imputation
 - data_reg.csv: The data of picked regressors after checking correlation(multicolinearity among predictors)
