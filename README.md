@@ -75,6 +75,6 @@ Two interactive maps ([NumberOnMap](docs/NumberOnMap.html) & [WordCloudOnMap](do
 
 > Screeshots of the interactive maps:
 
-<img src="viz_materials/screenshot1.png" alt="drawing" height="250"/> <img src="viz_materials/screenshot2.png" alt="drawing" height="250"/>
+> <img src="viz_materials/screenshot1.png" alt="drawing" height="250"/> <img src="viz_materials/screenshot2.png" alt="drawing" height="250"/>
 
 <img src="rainbow%20pup%20saying%20thank%20you.png" alt="drawing" width="250"/>
