@@ -73,7 +73,7 @@ Two interactive maps ([NumberOnMap](docs/NumberOnMap.html) & [WordCloudOnMap](do
 
 *Screeshots of the interactive maps:*
 
-<img src="viz_materials/screenshot1.png" alt="drawing" height="280"/> <img src="viz_materials/screenshot2.png" alt="drawing" height="280"/>
+<img src="viz_materials/screenshot1.png" alt="drawing" height="200"/> <img src="viz_materials/screenshot2.png" alt="drawing" height="200"/>
 
 *Note: since the size of the maps is large, it could take a long time to load the page. Please be patient!*
 
