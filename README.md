@@ -71,6 +71,10 @@ Besides packages covered above, additional packages & data sets in this part inc
 
 Two interactive maps ([NumberOnMap](docs/NumberOnMap.html) & [WordCloudOnMap](docs/WordCloudOnMap.html)) are included in the repository. You could access the maps directly through our project's public webpage [**Rooibos Map**](https://cs-ssa-w21.github.io/final-project-rooibos/). Learn more about our data by interacting with the maps!
 
+*Screeshots of the interactive maps:*
+
+<img src="viz_materials/screenshot1.png" alt="drawing" height="280"/> <img src="viz_materials/screenshot2.png" alt="drawing" height="280"/>
+
 *Note: since the size of the maps is large, it could take a long time to load the page. Please be patient!*
 
 <img src="rainbow%20pup%20saying%20thank%20you.png" alt="drawing" width="250"/>
